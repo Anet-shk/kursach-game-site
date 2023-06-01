@@ -1,10 +1,10 @@
-import {Flex} from "@chakra-ui/react";
 import React from "react";
+import {Flex} from "@chakra-ui/react";
 import { InstanceSearch } from "./InstanceSearch";
 import { MenuButtonHeader } from "./MenuButtonHeader";
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <Flex
       as={'header'}
@@ -17,7 +17,7 @@ export const Header = () => {
       borderTopRightRadius={'2xl'}
       borderTopLeftRadius={'2xl'}
     >
-      <MenuButtonHeader/>
+      <MenuButtonHeader {...props}/>
       <InstanceSearch />
       <ColorModeSwitcher />
     </Flex>

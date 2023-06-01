@@ -4,7 +4,7 @@ export const extendedTheme = extendTheme({
   styles: {
     global: {
       body: {
-        maxWidth: '',
+        maxWidth: '1200px',
         m: 'auto',
         minW: '200px',
       }

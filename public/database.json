@@ -1,0 +1,156 @@
+{
+    "filters": {
+        "smart": "Гра на ел. носії",
+        "outdoor": "На вулиці",
+        "withBall": "З м'ячем",
+        "indoor": "В приміщенні",
+        "cards": "З картами",
+        "meetings": "Для згуртування коллективу",
+        "age": {
+            "key": "Вік",
+            "min": "від",
+            "max": "до"
+        },
+        "players": {
+            "key": "Кількість гравців",
+            "min": "від",
+            "max": "до"
+        }
+    },
+    "games": {
+        "mafia": {
+            "name": "Мафія",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 6
+            },
+            "image": "1.jpg",
+            "link": "https://answiki.org.ua/843-yaki-pravyla-gry-mafiya.html"
+        },
+        "mafiaOnline" :{
+            "name": "Мафія онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 4,
+                "to": 22
+            },
+            "image": "2.jpg",
+            "link": "https://t.me/MafiaWarBot"
+        },
+        "mafia1": {
+            "name": "Мафія",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 6
+            },
+            "image": "1.jpg"
+        },
+        "mafiaOnline1" :{
+            "name": "Мафія онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 4,
+                "to": 22
+            },
+            "image": "2.jpg"
+        },
+        "mafia2": {
+            "name": "Мафія",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 6
+            },
+            "image": "1.jpg"
+        },
+        "mafiaOnline2" :{
+            "name": "Мафія онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 4,
+                "to": 22
+            },
+            "image": "2.jpg"
+        },
+        "mafia3": {
+            "name": "Мафія",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 6
+            },
+            "image": "1.jpg"
+        },
+        "mafiaOnline3" :{
+            "name": "Мафія онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "from": 4,
+                "to": 22
+            },
+            "image": "2.jpg"
+        }
+    }
+}
