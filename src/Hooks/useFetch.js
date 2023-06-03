@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 
 export function useFetch() {
+    const [games, setGames] = useState({});
+    const [filters, setFilters] = useState({});
     const [error, setError] = useState(null);
-    const [response, setResponse] = useState(null);
 
     useEffect(() => {
         (async () => {
             try {
                 const json = await fetch('database.json');
                 const res = await json.json();
-                setResponse(res);
+                setGames(res.games);
+                setFilters(res.filters);
             } catch (err) {
                 console.log('err: ', err);
                 setError(err);
@@ -17,5 +19,5 @@ export function useFetch() {
         })()
     }, [])
 
-    return { response, error }
+    return { games, setGames, error, filters }
 }

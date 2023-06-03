@@ -2,29 +2,41 @@ import React from 'react';
 import {
   ChakraProvider, useDisclosure,
 } from '@chakra-ui/react';
-import { Header } from './Components/Header/';
 import { extendedTheme } from './GlobalStyles';
-import { Main } from './Components/Main';
 import { useFetch } from './Hooks/useFetch';
-import { ErrorBox } from './Components/ErrorBox';
-import { Context } from './Components/Functions/context';
+import { Context } from './Functions/context'; // here could be used Redux, but this small project, so...
 // import { isMobile } from 'react-device-detect';
-import { Filter } from './Components/Filter';
+import { SomeLayer } from './Components';
+import { useFiltersObj } from './Hooks/useFiltersObj';
+import { useDeletedGames } from './Hooks/useDeletedGames';
+import { useRange } from './Hooks/useRange';
+import { useRadioValues } from './Hooks/useRadioValues';
 
 
 function App() {
 
-  const {response, error} = useFetch(); // {response, error}
-  const {isOpen, onToggle} = useDisclosure();
+  const { games, setGames, error, filters } = useFetch(); // {response, error}
+  const { isOpen, onToggle } = useDisclosure(); // it`s for filters slider (hamburger)
+  const { filtersObj, setFiltersObj } = useFiltersObj(filters);
+  const { deletedGames, setDeletedGames } = useDeletedGames();
+  const { rangeValue, setRangeValue } = useRange(filters);
+  const { age, setAge, players, setPlayers } = useRadioValues('');
 
   return (
-    <Context.Provider value={{response}}> {/* here could be used Redux, but this small project, so... */}
+    <Context.Provider value={
+      {
+        filters,
+        onToggle,
+        games, setGames,
+        filtersObj, setFiltersObj,
+        deletedGames, setDeletedGames,
+        rangeValue, setRangeValue,
+        age, setAge, 
+        players, setPlayers
+      }
+    }>
       <ChakraProvider theme={extendedTheme}>
-        <Header isFilterOpen={onToggle}/>
-        <Filter isOpen={isOpen}></Filter>
-        { error ? (<ErrorBox text={'Some went wrong with fetching database with games'}/>) : (<Main/>)} 
-
-        {/* <Box w={['10px', '20px', '30px', '40px', '50px']} h={['10px', '20px', '30px', '40px', '50px']} bg='blackAlpha.700' /> */}
+        <SomeLayer isOpen={isOpen} error={error}/>
       </ChakraProvider>
     </Context.Provider>
   );

@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Flex } from "@chakra-ui/react";
 import { ItemOfList } from "./itemsForList";
-import { Context } from "../Functions/context";
+import { Context } from "../../Functions/context";
 
 export function ListOfGames() {
-  const {response} = useContext(Context);
+  const {games} = useContext(Context);
   return (
     <Flex
       as="ul"
@@ -16,15 +16,13 @@ export function ListOfGames() {
       flexWrap={'wrap'}
     >
       {
-        response 
+        games 
         ? 
         (
-          Object.keys(response.games).map(key => {
-            return (<ItemOfList key={key} prop={response.games[key]}/>);
+          Object.keys(games).map(key => {
+            return (<ItemOfList key={key} prop={games[key]}/>);
           })
         )
-
-          
         : "Loading"
       }
     </Flex>

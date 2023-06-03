@@ -53,21 +53,20 @@
             "image": "2.jpg",
             "link": "https://t.me/MafiaWarBot"
         },
-        "mafia1": {
-            "name": "Мафія",
-            "smart": false,
-            "outdoor": false,
+        "trueOrCall": {
+            "name": "Правда чи виклик",
+            "smart": true,
+            "outdoor": true,
             "withBall": false,
             "indoor": true,
-            "cards": true,
-            "meetings": false,
-            "age": {
-                "min": 8
-            },
+            "cards": false,
+            "meetings": true,
+            "age": {},
             "players": {
-                "from": 6
+                "min": 2,
+                "max": 10
             },
-            "image": "1.jpg"
+            "image": "3.png"
         },
         "mafiaOnline1" :{
             "name": "Мафія онлайн",
@@ -102,22 +101,20 @@
             },
             "image": "1.jpg"
         },
-        "mafiaOnline2" :{
-            "name": "Мафія онлайн",
+        "trueOrCall1": {
+            "name": "Правда чи виклик",
             "smart": true,
-            "outdoor": false,
+            "outdoor": true,
             "withBall": false,
-            "indoor": false,
+            "indoor": true,
             "cards": false,
-            "meetings": false,
-            "age": {
-                "min": 8
-            },
+            "meetings": true,
+            "age": {},
             "players": {
-                "from": 4,
-                "to": 22
+                "min": 2,
+                "max": 10
             },
-            "image": "2.jpg"
+            "image": "3.png"
         },
         "mafia3": {
             "name": "Мафія",

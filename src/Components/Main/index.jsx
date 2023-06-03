@@ -16,7 +16,7 @@ export const Main = () => {
       borderBottomRightRadius={'2xl'}
       borderBottomLeftRadius={'2xl'}
     >
-    <ListOfGames  />
+      <ListOfGames />
     </Box>
   )
 }
