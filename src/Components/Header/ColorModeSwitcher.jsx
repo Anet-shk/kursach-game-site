@@ -18,6 +18,7 @@ export const ColorModeSwitcher = props => {
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       m='3'
+      borderRadius={'20px'}
       {...props}
     />
   );

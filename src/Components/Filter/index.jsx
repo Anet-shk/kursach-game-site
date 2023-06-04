@@ -73,7 +73,6 @@ export function Filter({isOpen}) {
         }
 
       }
-
       
       // if pass all filters => write to accumulator object
       if (controlFlag) accumObj[currentGameKey] = games[currentGameKey];
@@ -90,9 +89,9 @@ export function Filter({isOpen}) {
         w={['100%', '90%', '85%', '85%', '80%']}
         maxW={'1200px'}
         m={'auto'}
-        p={'10px'}
-        border={'1px solid black'}
-        borderColor={'mainBorderColor'}
+        p={'15px 2px'}
+        // border={'1px solid black'}
+        // borderColor={'mainBorderColor'}
         flexDir={'column'}
         alignItems={'center'}
       >

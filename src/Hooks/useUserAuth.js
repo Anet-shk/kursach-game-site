@@ -9,9 +9,7 @@ export function useUserAuth(app) {
   const auth = getAuth(app);
 
   function login() {
-    console.log('here0');
     signInWithPopup(auth, provider).then((result) => {
-      console.log('here1');
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.

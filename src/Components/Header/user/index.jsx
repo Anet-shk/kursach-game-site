@@ -6,11 +6,11 @@ import { useContext } from "react";
 
 export function User() {
 
-  const {userAuth, login} = useContext(Context);
+  const {userAuth, login, logout} = useContext(Context);
 
   return (
     <Flex 
-      p={'auto'}
+      m={'5px 0px'}
       textAlign={'center'}
       justifyContent={'space-around'}
       flexDir={'column'}
@@ -26,9 +26,7 @@ export function User() {
         h={9}
         m={'auto'}
       />
-      <Box>
-        {userAuth ? 'Вихід' : 'Вхід'}
-      </Box>
+      {!userAuth && (<Box>Вхід</Box>)}
     </Flex>
   )
 }
