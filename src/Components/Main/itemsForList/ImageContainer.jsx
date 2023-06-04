@@ -7,7 +7,6 @@ export function ImageContainer({imageObj}) {
 
   return (
     <Box
-      mt={'8'}
       w={'200px'}
       h={'200px'}
       // bgColor={'pink.100'}

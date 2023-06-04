@@ -14,6 +14,7 @@ import { useRadioValues } from './Hooks/useRadioValues';
 import { useCurrentGames } from './Hooks/useCurrentGames';
 import { useRerenderFilters } from './Hooks/useRerenderFilters';
 import { buildConfig } from './Config';
+import { initializeApp } from "firebase/app";
 
 
 function App() {
@@ -27,7 +28,18 @@ function App() {
   const { rerenderFilters, setRerenderFilters} = useRerenderFilters(0);
   const config = buildConfig(Object.keys(filters).filter(key => typeof filters[key] === 'string'));
   const { age, setAge, players, setPlayers } = useRadioValues(config);
-  
+  const firebaseConfig = {
+    apiKey: "AIzaSyBEgWEXpXu8RIB5wB-Nxu2VfAA72t9vh8I",
+    authDomain: "kursach-game-site.firebaseapp.com",
+    databaseURL: "https://kursach-game-site-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "kursach-game-site",
+    storageBucket: "kursach-game-site.appspot.com",
+    messagingSenderId: "1068377534553",
+    appId: "1:1068377534553:web:1be0f2d7d7edc3f2064148",
+    measurementId: "G-KX4V1921GZ"
+  };
+  const app = initializeApp(firebaseConfig);
+
   return (
     <Context.Provider value={
       {

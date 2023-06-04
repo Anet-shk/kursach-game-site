@@ -12,13 +12,17 @@ export function ItemOfList({prop}) {
       as="li"
     >
       <Box 
-        pb={'5px'}
+        p={1}
+        mt={4}
         as="a"
         href={link}
         target="_blank"
         textDecor={'none'}
         textAlign={'center'}
         cursor={'pointer'}
+        border={'1px solid black'}
+        borderColor={'mainBorderColor'}
+        borderRadius={'2xl'}
       >
         <ImageContainer imageObj={{name, image}} />
         <TextSign text={name}/>
