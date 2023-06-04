@@ -30,7 +30,7 @@
                 "min": 8
             },
             "players": {
-                "from": 6
+                "min": 6
             },
             "image": "1.jpg",
             "link": "https://answiki.org.ua/843-yaki-pravyla-gry-mafiya.html"
@@ -47,8 +47,8 @@
                 "min": 8
             },
             "players": {
-                "from": 4,
-                "to": 22
+                "min": 4,
+                "max": 22
             },
             "image": "2.jpg",
             "link": "https://t.me/MafiaWarBot"
@@ -80,8 +80,8 @@
                 "min": 8
             },
             "players": {
-                "from": 4,
-                "to": 22
+                "min": 4,
+                "max": 22
             },
             "image": "2.jpg"
         },
@@ -97,7 +97,7 @@
                 "min": 8
             },
             "players": {
-                "from": 6
+                "min": 6
             },
             "image": "1.jpg"
         },
@@ -128,7 +128,7 @@
                 "min": 8
             },
             "players": {
-                "from": 6
+                "min": 6
             },
             "image": "1.jpg"
         },
@@ -144,8 +144,8 @@
                 "min": 8
             },
             "players": {
-                "from": 4,
-                "to": 22
+                "min": 4,
+                "max": 22
             },
             "image": "2.jpg"
         }

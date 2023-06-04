@@ -4,7 +4,10 @@ import { Context } from "../../../Functions/context";
 
 export function CheckRadio({filters, currentKey}) {
 
-  const {filtersObj, setFiltersObj} = useContext(Context);
+  const {
+    filtersObj, setFiltersObj,
+    rerenderFilters, setRerenderFilters
+  } = useContext(Context);
 
   function getNewFilterObj(e) {
     filtersObj.checkRadio[currentKey] = e.target.checked;
@@ -24,7 +27,7 @@ export function CheckRadio({filters, currentKey}) {
         mr={'5px'}
         onChange={(e) => {
           setFiltersObj(getNewFilterObj(e));
-          console.log({filtersObj})
+          setRerenderFilters(() => rerenderFilters + 1);
         }}
       />
       <Box 

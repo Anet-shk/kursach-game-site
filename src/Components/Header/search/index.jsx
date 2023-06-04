@@ -6,7 +6,10 @@ import { Context } from "../../../Functions/context";
 
 export const InstanceSearch = () => {
 
-  const {filtersObj, setFiltersObj} = useContext(Context);
+  const {
+    filtersObj, setFiltersObj,
+    rerenderFilters, setRerenderFilters
+  } = useContext(Context);
 
   return (
     <HStack
@@ -28,7 +31,8 @@ export const InstanceSearch = () => {
           setFiltersObj(() => {
             filtersObj.search = e.target.value;
             return filtersObj;
-          })
+          });
+          setRerenderFilters(() => rerenderFilters + 1)
         }}
         // onChange={}
       />

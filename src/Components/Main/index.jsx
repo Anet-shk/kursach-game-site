@@ -13,6 +13,7 @@ export const Main = () => {
       m={'auto'}
       p={'5px'}
       border={'1px solid black'}
+      borderColor={'mainBorderColor'}
       borderBottomRightRadius={'2xl'}
       borderBottomLeftRadius={'2xl'}
     >

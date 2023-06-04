@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 
-export function useRadioValues(init) {
+export function useRadioValues(config) {
   
-  const [ age, setAge ] = useState(20);
-  const [ players, setPlayers ] = useState(1);
+  const [ age, setAge ] = useState(config.checkRange.age.default);
+  const [ players, setPlayers ] = useState(config.checkRange.players.default);
 
   return { age, setAge, players, setPlayers }
 }

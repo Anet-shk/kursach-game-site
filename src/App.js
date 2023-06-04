@@ -11,6 +11,9 @@ import { useFiltersObj } from './Hooks/useFiltersObj';
 import { useDeletedGames } from './Hooks/useDeletedGames';
 import { useRange } from './Hooks/useRange';
 import { useRadioValues } from './Hooks/useRadioValues';
+import { useCurrentGames } from './Hooks/useCurrentGames';
+import { useRerenderFilters } from './Hooks/useRerenderFilters';
+import { buildConfig } from './Config';
 
 
 function App() {
@@ -20,19 +23,25 @@ function App() {
   const { filtersObj, setFiltersObj } = useFiltersObj(filters);
   const { deletedGames, setDeletedGames } = useDeletedGames();
   const { rangeValue, setRangeValue } = useRange(filters);
-  const { age, setAge, players, setPlayers } = useRadioValues('');
-
+  const { currentGames, setCurrentGames } = useCurrentGames({});
+  const { rerenderFilters, setRerenderFilters} = useRerenderFilters(0);
+  const config = buildConfig(Object.keys(filters).filter(key => typeof filters[key] === 'string'));
+  const { age, setAge, players, setPlayers } = useRadioValues(config);
+  
   return (
     <Context.Provider value={
       {
-        filters,
-        onToggle,
         games, setGames,
+        currentGames, setCurrentGames,
+        filters,
+        rerenderFilters, setRerenderFilters,
+        onToggle,
         filtersObj, setFiltersObj,
         deletedGames, setDeletedGames,
         rangeValue, setRangeValue,
         age, setAge, 
-        players, setPlayers
+        players, setPlayers,
+        config
       }
     }>
       <ChakraProvider theme={extendedTheme}>

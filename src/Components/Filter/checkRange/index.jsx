@@ -7,13 +7,16 @@ export function CheckRange({elObj, currentKey}) {
   const { 
     filtersObj, setFiltersObj,
     age, setAge, 
-    players, setPlayers
+    players, setPlayers,
+    config
   } = useContext(Context);
 
   const currentObj = {age: {value: age, setValue: setAge}, players: {value: players, setValue: setPlayers}};
 
   useEffect(() => {
     function composeNewFilterObj(filtersObj) {
+      // console.log(filtersObj)
+      
       if (!filtersObj.checkRange) {
         filtersObj.checkRange = {
           [currentKey]: {value: currentObj[currentKey].value}
@@ -23,31 +26,31 @@ export function CheckRange({elObj, currentKey}) {
       } else {
         filtersObj.checkRange[currentKey].value = currentObj[currentKey].value;
       }
-      return filtersObj
+      return filtersObj;
     }
     setFiltersObj(composeNewFilterObj(filtersObj));
-  }, [age, currentKey, currentObj, filtersObj, players, setFiltersObj]);
+  }, [age, players, currentKey, currentObj, filtersObj, setFiltersObj]);
 
   return (
     <Box as="li">
       <Box
         as="input"
         type="number"
-        max={100}
-        min={1}
+        max={config.checkRange[currentKey].max}
+        min={config.checkRange[currentKey].min}
         maxW={'30px'}
-        p={'2px'}
+        p={1}
         value={currentObj[currentKey].value}
         onChange={(e) => currentObj[currentKey].setValue(e.target.value)}
         borderRadius={'4px'}
-        m={'2px'}
+        m={2}
       />
       <Box
         as="input"
         type="range"
         id={`${currentKey}`}
-        max={100}
-        min={1}
+        max={config.checkRange[currentKey].max}
+        min={config.checkRange[currentKey].min}
         mr={'5px'}
         value={currentObj[currentKey].value}
         onChange={(e) => currentObj[currentKey].setValue(e.target.value)}

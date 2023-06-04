@@ -14,6 +14,7 @@ export function Header() {
       minW={'10px'}
       m={'auto'}
       border={'1px solid black'}
+      borderColor={'mainBorderColor'}
       borderTopRightRadius={'2xl'}
       borderTopLeftRadius={'2xl'}
     >
