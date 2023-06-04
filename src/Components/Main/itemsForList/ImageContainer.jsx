@@ -3,7 +3,9 @@ import React from "react";
 
 export function ImageContainer({imageObj}) {
 
-  const {name, image} = imageObj;
+  const { name, image } = imageObj;
+  
+  const myImg = (require(`../../../source/media/gamesPreview/${image}`))
 
   return (
     <Box
@@ -15,7 +17,7 @@ export function ImageContainer({imageObj}) {
     >
       <Box
         as="img"
-        src={require(`../../../source/media/gamesPreview/${image}`)}
+        src={myImg}
         alt={name}
         title={name}
         verticalAlign={'center'}
