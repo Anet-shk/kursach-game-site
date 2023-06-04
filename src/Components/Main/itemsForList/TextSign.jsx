@@ -5,6 +5,7 @@ export function TextSign({text}) {
   return (
     <Box 
       as="p"
+      maxW={'195px'}
     >
       {text}
     </Box>

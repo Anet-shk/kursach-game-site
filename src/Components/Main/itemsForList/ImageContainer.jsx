@@ -29,7 +29,9 @@ export function ImageContainer({imageObj}) {
         bottom={'0'}
         right={'0'}
         left={'0'}
-        borderRadius={'4px'}
+        borderRadius={'2xl'}
+        maxH={'195px'}
+        maxW={'195px'}
       />
     </Box>
   )

@@ -16,6 +16,7 @@ export function ItemOfList({prop}) {
     >
       <Box 
         mt={4}
+        pb={4}
         as="a"
         href={link}
         target="_blank"
