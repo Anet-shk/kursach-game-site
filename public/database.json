@@ -132,22 +132,21 @@
             },
             "image": "1.jpg"
         },
-        "mafiaOnline3" :{
-            "name": "Мафія онлайн",
-            "smart": true,
+        "mafia4": {
+            "name": "Мафія",
+            "smart": false,
             "outdoor": false,
             "withBall": false,
-            "indoor": false,
-            "cards": false,
+            "indoor": true,
+            "cards": true,
             "meetings": false,
             "age": {
                 "min": 8
             },
             "players": {
-                "min": 4,
-                "max": 22
+                "min": 6
             },
-            "image": "2.jpg"
+            "image": "1.jpg"
         }
     }
 }

@@ -15,6 +15,8 @@ import { useCurrentGames } from './Hooks/useCurrentGames';
 import { useRerenderFilters } from './Hooks/useRerenderFilters';
 import { buildConfig } from './Config';
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { useUserAuth } from './Hooks/useUserAuth';
 
 
 function App() {
@@ -38,8 +40,12 @@ function App() {
     appId: "1:1068377534553:web:1be0f2d7d7edc3f2064148",
     measurementId: "G-KX4V1921GZ"
   };
-  const app = initializeApp(firebaseConfig);
 
+  const app = initializeApp(firebaseConfig);
+  
+  // Initialize Firebase Authentication and get a reference to the service
+  const { userAuth, setUserAuth, login, logout, errorLogin } = useUserAuth(app);
+  
   return (
     <Context.Provider value={
       {
@@ -53,7 +59,9 @@ function App() {
         rangeValue, setRangeValue,
         age, setAge, 
         players, setPlayers,
-        config
+        config,
+        userAuth, setUserAuth, 
+        login, logout, errorLogin
       }
     }>
       <ChakraProvider theme={extendedTheme}>

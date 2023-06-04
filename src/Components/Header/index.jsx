@@ -3,6 +3,7 @@ import {Flex} from "@chakra-ui/react";
 import { InstanceSearch } from "./search/";
 import { MenuButtonHeader } from "./MenuButtonHeader";
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { User } from './user/'
 
 export function Header() {
   return (
@@ -13,6 +14,7 @@ export function Header() {
       maxW={'1200px'}
       minW={'10px'}
       m={'auto'}
+      mt={2}
       border={'1px solid black'}
       borderColor={'mainBorderColor'}
       borderTopRightRadius={'2xl'}
@@ -20,6 +22,7 @@ export function Header() {
     >
       <MenuButtonHeader />
       <InstanceSearch />
+      <User />
       <ColorModeSwitcher />
     </Flex>
   )
