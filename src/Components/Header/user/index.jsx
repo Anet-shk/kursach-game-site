@@ -1,13 +1,14 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Image } from "@chakra-ui/react";
 import { Icon } from '@chakra-ui/react'
-import { BiUserCircle } from 'react-icons/bi'
 import { Context } from "../../../Functions/context";
 import { useContext } from "react";
+import { IconForButton } from "./IconForButton";
 
-export function User() {
+export function User({width = 9, height = 9}) {
 
   const {userAuth, login, logout} = useContext(Context);
 
+  console.log(userAuth)
   return (
     <Flex 
       m={'5px 0px'}
@@ -20,12 +21,23 @@ export function User() {
         userAuth ? logout() : login();
       }}
     >
-      <Icon 
-        as={BiUserCircle}
-        w={9}
-        h={9}
-        m={'auto'}
-      />
+      {
+        userAuth && userAuth.photoURL ? (
+          <Image
+            src={userAuth.photoURL}
+            alt={userAuth.displayName}
+            borderRadius={'2xl'}
+            w={width}
+            h={height}
+          />
+        ) : (
+          <IconForButton 
+            height={height} 
+            width={width}
+          />
+        )
+      }
+      
       {!userAuth && (<Box>Вхід</Box>)}
     </Flex>
   )
