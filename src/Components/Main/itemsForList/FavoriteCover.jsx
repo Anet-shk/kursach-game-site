@@ -1,7 +1,27 @@
 import { Box } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { HiOutlineHeart } from "react-icons/hi";
 
 export function FavoriteCover({favorites, setFavorites, myKey: key}) {
+
+  const [shouldRewriteFavorite, setShouldRewriteFavorite] = useState(0);
+
+  useEffect(() => {
+    (favorites.indexOf(key) + 1) ?
+      setFavorites(() => {
+        favorites = favorites.split(", ").filter(el => key != el).join(', ')
+        return favorites;
+      }) :
+      setFavorites(() => {
+        console.log('1', favorites)
+        favorites = favorites[0] ? favorites.concat(`, ${key}`) : key;
+        console.log('2', favorites)
+        return favorites
+      })
+  }, [shouldRewriteFavorite])
+
+  
+
   return (
     <Box
       position={"absolute"}
@@ -19,18 +39,11 @@ export function FavoriteCover({favorites, setFavorites, myKey: key}) {
         h={7}
         fill={'rgba(249,159,255,1)'}
         color={'gray.200'}
-        onClick={(e) => {
-          e.preventDefault();
-          (favorites.indexOf(key) + 1) ?
-            setFavorites(() => {
-              favorites = favorites.split(", ").filter(el => key != el).join(', ')
-              return favorites;
-            }) :
-            setFavorites(() => {
-              favorites = favorites.concat(`, ${key}`);
-              return favorites
-            }
-          )
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          console.log('here')
+          setShouldRewriteFavorite(() => shouldRewriteFavorite + 1);
         }}
       />
     </Box>

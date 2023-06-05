@@ -66,7 +66,830 @@
                 "min": 2,
                 "max": 10
             },
-            "image": "3.png"
+            "image": "3.png",
+            "link": "https://ahaslides.com/uk/blog/truth-or-dare-questions/ "
+        },
+        "domino": {
+            "name": "Доміно",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "4.jpeg",
+            "link": "https://uk.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D1%96%D0%BD%D0%BE "
+        },
+        "shashkiOnLain": {
+            "name": "Шашки онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "5.png",
+            "link": "https://logic-games.spb.ru/checkers/ "
+        },
+        "shashki": {
+            "name": "Шашки",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "6.jpg",
+            "link": "https://uk.wikipedia.org/wiki/%D0%A8%D0%B0%D1%88%D0%BA%D0%B8"
+        },
+        "kolonizatory": {
+            "name": "Колонізатори",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 10
+            },
+            "players": {
+                "min": 3,
+                "max": 4
+            },
+            "image": "7.jpg",
+            "link": "https://geekach.com.ua/kolonizatory-settlers-of-catan/"
+        },
+        "madgong": {
+            "name": "Маджонг",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 4,
+                "max": 4
+            },
+            "image": "8.jpg",
+            "link": "https://desktopgames.com.ua/games/946/mahjong_rules_rus.pdf"
+        },
+        "reversi": {
+            "name": "Реверсі",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "9.jpg",
+            "link": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81%D1%96"
+        },
+        "dgenga": {
+            "name": "Дженга",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "min": 2,
+                "max": 4
+            },
+            "image": "10.jpg",
+            "link": "https://uk.wikipedia.org/wiki/%D0%94%D0%B6%D0%B5%D0%BD%D0%B3%D0%B0_(%D0%B3%D1%80%D0%B0"
+        },
+        "gameFor234Plaers": {
+            "name": "Ігри для 2 3 4 гравців",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 9
+            },
+            "players": {
+                "min": 2,
+                "max": 4
+            },
+            "image": "11.png",
+            "link": "https://play.google.com/store/apps/details?id=com.ction.playergames&hl=uk&gl=US"
+        },
+        "basketbol": {
+            "name": "Баскетбол",
+            "smart": false,
+            "outdoor": true,
+            "withBall": true,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 10,
+                "max": 10
+            },
+            "image": "12.png",
+            "link": "https://uk.wikipedia.org/wiki/%D0%91%D0%B0%D1%81%D0%BA%D0%B5%D1%82%D0%B1%D0%BE%D0%BB"
+        },
+        "gameWithBasketballBall": {
+            "name": "Ігри з баскетбольним м'ячем",
+            "smart": false,
+            "outdoor": true,
+            "withBall": true,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2
+            },
+            "image": "13.jpg",
+            "link": "http://sibsport.info/blogs/rst/igry_s_basketbolnym_myachom_na_odno_koltso.html"
+        },
+        "krokodilOnLain": {
+            "name": "Крокодил онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1
+            },
+            "image": "14.png",
+            "link": "https://drawpi.co/"
+        },
+        "krokodilBodyLanguage": {
+            "name": "Крокодил ”мова тіла”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2
+            },
+            "image": "15.png",
+            "link": "https://fun.24tv.ua/gra-krokodil-dlya-kompaniyi-pravila-spisok-100-ostanni-novini_n1648162"
+        },
+        "krokodilTableGame": {
+            "name": "Крокодил “настільна гра”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 4
+            },
+            "image": "16.png",
+            "link": "https://arial.ua/products/krokodil"
+        },
+        "kodoviImenaOnLain": {
+            "name": "Кодові імена онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 4
+            },
+            "image": "17.jpg",
+            "link": "https://codenames.game/"
+        },
+        "kodoviImenaTableGame": {
+            "name": "Кодові імена “настільна гра”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 12
+            },
+            "players": {
+                "min": 4,
+                "max": 12
+            },
+            "image": "18.jpg",
+            "link": "https://igrodol.com.ua/uk/kodovi-imena-gra-sliv"
+        },
+        "danetki": {
+            "name": "Данєтки / ТакНішки онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2
+            },
+            "image": "19.png",
+            "link": "https://yesnogame.net/"
+        },
+        "danetkiLysuvaty": {
+            "name": "Данєтки, настільна гра “Лисуватий”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 10
+            },
+            "players": {
+                "min": 2
+            },
+            "image": "20.png",
+            "link": "https://prom.ua/ua/p1748037184-nastolnaya-igra-danetki.html"
+        },
+        "danetkiSherlok": {
+            "name": "Данєтки, настільна гра “Щерлок”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 14
+            },
+            "players": {
+                "min": 2
+            },
+            "image": "21.png",
+            "link": "https://prom.ua/ua/p1748040528-nastolnaya-igra-danetki.html"
+        },
+        "danetkiExpert": {
+            "name": "Данєтки, настільна гра “Експерт”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 12
+            },
+            "players": {
+                "min": 2
+            },
+            "image": "22.png",
+            "link": "https://prom.ua/ua/p948229235-nastolnaya-kartochnaya-igra.html"
+        },
+        "danetkiVyvodok": {
+            "name": "Данєтки, настільна гра “Виводок”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": true,
+            "meetings": false,
+            "age": {
+                "min": 8
+            },
+            "players": {
+                "min": 2
+            },
+            "image": "23.png",
+            "link": "https://prom.ua/ua/p1141260093-nastolnaya-kartochnaya-igra.html"
+        },
+        "dviTrueOneFolse": {
+            "name": "Дві правди і одна брехня",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": true,
+            "age": {},
+            "players": {
+                "min": 2
+            },
+            "image": "24.jpg",
+            "link": "https://uk.gottamentor.com/two-truths-lie"
+        },
+        "zum": {
+            "name": "Зум",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 4
+            },
+            "image": "25.jpg",
+            "link": "https://ucrazy.ru/foto/1541569663-zoom.html"
+        },
+        "fotbolOnLain": {
+            "name": "Футбол онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 4
+            },
+            "image": "28.jpg",
+            "link": "https://igru.com.ua/ihry-na-4-hravtsi/30166-hra-futbol-na-4-hravtsi.html"
+        },
+        "fotbol": {
+            "name": "Футбол",
+            "smart": false,
+            "outdoor": true,
+            "withBall": true,
+            "indoor": false,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 6,
+                "max": 22
+            },
+            "image": "29.webp",
+            "link": "https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%83"
+        },
+        "tankiVLaberinte": {
+            "name": "Танки в Лабіринті",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 4
+            },
+            "image": "30.jpg",
+            "link": "https://igru.com.ua/ihry-na-4-hravtsi/30185-hra-tanky-v-labirynti-na-4-hravtsi.html"
+        },
+        "ekshynTanki": {
+            "name": "Екшен Танки",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 4
+            },
+            "image": "36.jpg",
+            "link": "https://igru.com.ua/ihry-na-4-hravtsi/39495-hra-ekshen-tanky-dlia-2-4-hravtsiv-na-odnomu-ekrani.html"
+        },
+        "fotbolSumo": {
+            "name": "Футбол Сумо",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 4
+            },
+            "image": "38.jpg",
+            "link": "https://igru.com.ua/ihry-na-4-hravtsi/38270-hra-na-4-hravtsi-futbol-sumo.html"
+        },
+        "fotbolFizika": {
+            "name": "Футбольна Фізика",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 4
+            },
+            "image": "50.jpg",
+            "link": "https://igru.com.ua/ihry-futbol/25200-hra-futbolna-fizyka.html"
+        },
+        "fotbolGolovamiArenaVsiZirky": {
+            "name": "Футбол Головами Арена: Всі Зірки",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "54.jpg",
+            "link": "https://igru.com.ua/ihry-futbol-holovamy/27865-hra-futbol-holovamy-arena-vsi-zirky.html"
+        },
+        "naDvoch3": {
+            "name": "На Двох 3",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "57.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/23102-hra-na-dvokh-3.html"
+        },
+        "tanki": {
+            "name": "Танки",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "59.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/23118-hra-tanky-na-dvokh.html"
+        },
+        "tankiVLabirynti": {
+            "name": "Танки в Лабіринті",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 3
+            },
+            "image": "62.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/26531-hra-na-2-i-3-tanky-v-labirynti.html"
+        },
+        "fotbolGolovami": {
+            "name": "Футбол Головами",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "64.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/23112-hra-na-dvokh-futbol-holovamy.html"
+        },
+        "morskoyBoyOnlain": {
+            "name": "Морський Бій онлайн",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "66.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/22983-hra-morskyi-bii-na-dvokh.html"
+        },
+        "morskoyBoy": {
+            "name": "Морський Бій",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "67.png",
+            "link": "https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%B1%D1%96%D0%B9_(%D0%BD%D0%B0%D1%81%D1%82%D1%96%D0%BB%D1%8C%D0%BD%D0%B0_%D0%B3%D1%80%D0%B0"
+        },
+        "morskoyBoyTableGame": {
+            "name": "Морський Бій “Настільна гра”",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {
+                "min": 4
+            },
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "68.png",
+            "link": "https://rozetka.com.ua/ua/344432473/p344432473/"
+        },
+        "fotbolNaMashynax": {
+            "name": "Футбол на машинах",
+            "smart": true,
+            "outdoor": false,
+            "withBall": true,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "70.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/31295-hra-na-dvokh-futbol-na-mashynakh.html"
+        },
+        "xrestikiNolikiVBloknoti2": {
+            "name": "Хрестики-Нолики в Блокноті 2",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "74.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/26338-hra-khrestyky-nolyky-v-bloknoti-2-na-dvokh.html"
+        },
+        "xrestikiNoliki": {
+            "name": "Хрестики-Нулики",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "75.png",
+            "link": "https://uk.wikipedia.org/wiki/%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D0%BD%D1%83%D0%BB%D0%B8%D0%BA%D0%B8"
+        },
+        "shvy3D": {
+            "name": "Шахи 3Д",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "76.jpg",
+            "link": "https://igru.com.ua/ihry-na-dvokh/25586-hra-shakhy-3d-na-dvokh.html"
+        },
+        "shvyOnlainZNla": {
+            "name": "Шахи онлайн з нуля",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 1,
+                "max": 2
+            },
+            "image": "78.png",
+            "link": "https://www.chess.com/uk"
+        },
+        "dovgiNardy": {
+            "name": "Довгі нарди",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "79.jpg",
+            "link": "https://1001rich.com.ua/ua/blog-ua/statti/jak-grati-v-dovgi-nardi-pravila-ua/"
+        },
+        "korotkiNardy": {
+            "name": "Короткі нарди",
+            "smart": false,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "80.jpg",
+            "link": "https://1001rich.com.ua/ua/blog-ua/statti/jak-grati-v-korotki-nardi-pravila-ua/"
+        },
+        "klasychniNardy": {
+            "name": "Класичні нарди",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "86.jpg",
+            "link": "https://www.game-game.com.ua/uk/169353/"
+        },
+        "vogonTaVoda4": {
+            "name": "Вогонь та Вода 4",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "87.jpg",
+            "link": "https://www.game-game.com.ua/uk/42877/"
+        },
+        "vogonTaVoda2": {
+            "name": "Вогонь та Вода 2",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "88.jpg",
+            "link": "https://www.game-game.com.ua/uk/189535/"
+        },
+        "vogonTaVoda6": {
+            "name": "Вогонь та Вода 6",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "89.jpg",
+            "link": "https://www.game-game.com.ua/uk/224920/"
+        },
+        "vogonTaVoda1": {
+            "name": "Вогонь та Вода 1",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "100.jpg",
+            "link": "https://www.game-game.com.ua/uk/188324/"
+        },
+        "vogonTaVoda5": {
+            "name": "Вогонь та Вода 5",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "101.jpg",
+            "link": "https://www.game-game.com.ua/uk/196424/"
+        },
+        "tankovaBorotba": {
+            "name": "Танкова боротьба",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "92.jpg",
+            "link": "https://www.game-game.com.ua/uk/174869/"
+        },
+        "gurkitTankiv": {
+            "name": "Гуркіт танків",
+            "smart": true,
+            "outdoor": false,
+            "withBall": false,
+            "indoor": true,
+            "cards": false,
+            "meetings": false,
+            "age": {},
+            "players": {
+                "min": 2,
+                "max": 2
+            },
+            "image": "95.jpg",
+            "link": "https://www.game-game.com.ua/uk/184601/"
         }
     }
 }

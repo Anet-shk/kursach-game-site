@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { VStack, Box } from "@chakra-ui/react";
 import { ImageContainer } from "./ImageContainer";
 import { TextSign } from "./TextSign";
@@ -9,11 +9,12 @@ export function ItemOfList({prop: key}) {
 
   const [favoriteLocal, setFavoriteLocal] = useState(false);
   const {currentGames, favorites, setFavorites, getFavData} = useContext(Context);
-  console.log({favorites})
-
   const {name, image, link, id} = currentGames[key];
 
-  if (favorites.indexOf(key) + 1) setFavoriteLocal(true);
+  useEffect(() => {
+    if (favorites.indexOf(key) + 1) setFavoriteLocal(true);
+  }, [])
+  
   
 
   return (
@@ -35,7 +36,7 @@ export function ItemOfList({prop: key}) {
           setFavoriteLocal(true);
         }}
         onMouseLeave={(e) => {
-          setFavoriteLocal(Boolean(favorites.indexOf(key) + 1) ? true : false);
+          setFavoriteLocal(() => Boolean(favorites.indexOf(key) + 1) ? true : false);
         }}
       >
         {favoriteLocal && (<FavoriteCover myKey={key} favorites={favorites} setFavorites={setFavorites} />)}
