@@ -23,8 +23,8 @@ export function ItemOfList({prop}) {
         textDecor={'none'}
         textAlign={'center'}
         cursor={'pointer'}
-        border={'1px solid black'}
-        borderColor={'mainBorderColor'}
+        // border={'1px solid black'}
+        // borderColor={'mainBorderColor'}
         borderRadius={'2xl'}
         id={id}
         onMouseEnter={(e) => {
