@@ -1,24 +1,25 @@
 import { Box } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HiOutlineHeart } from "react-icons/hi";
+import { Context } from "../../../Functions/context";
 
 export function FavoriteCover({myFavorites: favorites, setFavorites, myKey: key}) {
 
-  const [shouldRewriteFavorite, setShouldRewriteFavorite] = useState(0);
+  const {shouldRewriteFavorite, setShouldRewriteFavorite} = useContext(Context);
 
   useEffect(() => {
-    
     (favorites.split(',').indexOf(key) + 1) ?
       setFavorites(() => {
         console.log('01', favorites)
         favorites = favorites.split(",").filter(el => key != el).join(',')
-        console.log('02', favorites)
+        console.log('02', favorites);
         return favorites;
       }) :
       setFavorites(() => {
         console.log('11', favorites)
+        if (favorites.split(',').indexOf(key) + 1) return favorites;
         favorites = favorites[0] ? favorites.concat(`,${key}`) : key;
-        console.log('12', favorites)
+        console.log('12', favorites);
         return favorites
       })
   }, [shouldRewriteFavorite]);

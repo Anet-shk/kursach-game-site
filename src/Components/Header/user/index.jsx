@@ -6,7 +6,7 @@ import { IconForButton } from "./IconForButton";
 
 export function User({width = 9, height = 9}) {
 
-  const {userAuth, login, logout, onToggleUser, setUserOpen} = useContext(Context);
+  const {userAuth, login, onToggleUser} = useContext(Context);
   
   return (
     <Flex 
@@ -18,7 +18,11 @@ export function User({width = 9, height = 9}) {
       cursor={'pointer'}
       onClick={(e) => {
         e.preventDefault();
-        userAuth ? onToggleUser() : login();
+        if (userAuth) {
+          onToggleUser();
+        } else {
+          login();
+        }
       }}
     >
       {

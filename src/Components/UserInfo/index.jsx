@@ -7,8 +7,7 @@ import { GiExitDoor } from "react-icons/gi"
 
 export function UserInfo() {
 
-  const {userAuth, isOpenUser, logout, onToggleUser} = useContext(Context);
-
+  const {userAuth, isOpenUser, logout, onToggleUser, writeUserData, favorites, setFavorites, renderLoginFav, setRenderLoginFav} = useContext(Context);
   return (
     <Collapse
       in={isOpenUser}
@@ -45,8 +44,16 @@ export function UserInfo() {
           as={GiExitDoor}
           cursor={'pointer'}
           onClick={(e) => {
-            logout()
-            onToggleUser()
+            logout();
+            onToggleUser();
+            setFavorites(() => {
+              if (favorites[0]) {
+                writeUserData(favorites + `,${favorites.split(',').slice(-1)}`);
+              } else {
+                writeUserData('')
+              }
+              return '';
+            });
           }}
         />
       </Flex>

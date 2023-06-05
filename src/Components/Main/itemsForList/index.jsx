@@ -8,7 +8,7 @@ import { Context } from "../../../Functions/context";
 export function ItemOfList({ prop: key }) {
 
   const [favoriteLocal, setFavoriteLocal] = useState(false);
-  const { currentGames, favorites, setFavorites, getFavData } = useContext(Context);
+  const { currentGames, favorites, setFavorites, renderLoginFav, setRenderLoginFav} = useContext(Context);
   
   const {name, image, link, id} = currentGames[key];
 
@@ -19,7 +19,7 @@ export function ItemOfList({ prop: key }) {
 
   useEffect(() => {
     if (favorites.split(",").indexOf(key) + 1) setFavoriteLocal(true);
-  }, [])
+  }, [renderLoginFav])
   
 
   return (
@@ -45,7 +45,6 @@ export function ItemOfList({ prop: key }) {
         }}
         onMouseLeave={(e) => {
           e.stopPropagation()
-          console.log('here', favorites.slice(','), favorites.slice(',').indexOf(key) + 1)
           setFavoriteLocal(() => Boolean(favorites.split(',').indexOf(key) + 1) ? true : false);
         }}
       >

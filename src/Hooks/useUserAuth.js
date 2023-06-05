@@ -1,18 +1,28 @@
 import { useEffect, useState } from "react";
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, getAuth, getRedirectResult } from "firebase/auth";
+import { getDatabase, onValue, ref } from "firebase/database";
 
-export function useUserAuth(app) {
-  
+export function useUserAuth(app, renderLoginFav, setRenderLoginFav) {
+  const database = getDatabase(app);
   const [userAuth, setUserAuth] = useState(null);
   const [errorLogin, setErrorLogin] = useState(null);
   const provider = new GoogleAuthProvider();
   const auth = getAuth(app);
+  const [favorites, setFavorites] = useState('');
 
   function login() {
     signInWithPopup(auth, provider).then((result) => {
       const user = result.user;
       setUserAuth(user)
-    }).then(() => {
+      return user
+    }).then((user) => {
+      const userRef = ref(database, 'users/' + user.uid);
+      onValue(userRef, (snapshot) => {
+        const userFavor = snapshot.val();
+        setFavorites(userFavor.favorites);
+        console.log('user get data', userFavor);
+        setRenderLoginFav(() => renderLoginFav + 1)
+      })
       console.warn('sign in - successfully')
     }).catch((error) => {
       setErrorLogin(error);
@@ -41,5 +51,5 @@ export function useUserAuth(app) {
   //   }, [userAuth])
   // })
 
-  return {userAuth, setUserAuth, login, logout, errorLogin};
+  return {userAuth, setUserAuth, login, logout, errorLogin, favorites, setFavorites, };
 }
