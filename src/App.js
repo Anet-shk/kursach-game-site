@@ -8,7 +8,7 @@ import { Context } from './Functions/context'; // here could be used Redux, but 
 // import { isMobile } from 'react-device-detect';
 import { SomeLayer } from './Components';
 import { useFiltersObj } from './Hooks/useFiltersObj';
-import { useDeletedGames } from './Hooks/useDeletedGames';
+// import { useDeletedGames } from './Hooks/useDeletedGames';
 import { useRange } from './Hooks/useRange';
 import { useRadioValues } from './Hooks/useRadioValues';
 import { useCurrentGames } from './Hooks/useCurrentGames';
@@ -17,19 +17,11 @@ import { buildConfig } from './Config';
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { useUserAuth } from './Hooks/useUserAuth';
+import { useDb } from './Hooks/useDb';
+import { useFavorites } from './Hooks/useFavorites';
 
 
 function App() {
-
-  const { games, setGames, error, filters } = useFetch(); // {response, error}
-  const { isOpen, onToggle } = useDisclosure(); // it`s for filters slider (hamburger)
-  const { filtersObj, setFiltersObj } = useFiltersObj(filters);
-  const { deletedGames, setDeletedGames } = useDeletedGames();
-  const { rangeValue, setRangeValue } = useRange(filters);
-  const { currentGames, setCurrentGames } = useCurrentGames({});
-  const { rerenderFilters, setRerenderFilters} = useRerenderFilters(0);
-  const config = buildConfig(Object.keys(filters).filter(key => typeof filters[key] === 'string'));
-  const { age, setAge, players, setPlayers } = useRadioValues(config);
   const firebaseConfig = {
     apiKey: "AIzaSyBEgWEXpXu8RIB5wB-Nxu2VfAA72t9vh8I",
     authDomain: "kursach-game-site.firebaseapp.com",
@@ -40,12 +32,21 @@ function App() {
     appId: "1:1068377534553:web:1be0f2d7d7edc3f2064148",
     measurementId: "G-KX4V1921GZ"
   };
-
   const app = initializeApp(firebaseConfig);
-  
-  // Initialize Firebase Authentication and get a reference to the service
   const { userAuth, setUserAuth, login, logout, errorLogin } = useUserAuth(app);
-  
+  const {  games, setGames, error, filters } = useFetch(); // {response, error}
+  // const { database,games: games1, setGames: setGames1, error: error1, filters: filters1 } = useDb(app);
+  const { isOpen: isOpenUser, onToggle: onToggleUser } = useDisclosure();
+  const { writeUserData, getFavData, favorites, setFavorites } = useFavorites(app, userAuth)
+  const { isOpen, onToggle } = useDisclosure(); // it`s for filters slider (hamburger)
+  const { filtersObj, setFiltersObj } = useFiltersObj(filters);
+  // const { deletedGames, setDeletedGames } = useDeletedGames();
+  const { rangeValue, setRangeValue } = useRange(filters);
+  const { currentGames, setCurrentGames } = useCurrentGames({});
+  const { rerenderFilters, setRerenderFilters} = useRerenderFilters(0);
+  const config = buildConfig(Object.keys(filters).filter(key => typeof filters[key] === 'string'));
+  const { age, setAge, players, setPlayers } = useRadioValues(config);
+  // const { favorites, setFavorites, writeUserData, getFavData } = useFavorites(database, userAuth);
   return (
     <Context.Provider value={
       {
@@ -55,13 +56,15 @@ function App() {
         rerenderFilters, setRerenderFilters,
         onToggle,
         filtersObj, setFiltersObj,
-        deletedGames, setDeletedGames,
+        // deletedGames, setDeletedGames,
         rangeValue, setRangeValue,
         age, setAge, 
         players, setPlayers,
         config,
         userAuth, setUserAuth, 
-        login, logout, errorLogin
+        login, logout, errorLogin,
+        isOpenUser, onToggleUser,
+        writeUserData, getFavData, favorites, setFavorites
       }
     }>
       <ChakraProvider theme={extendedTheme}>

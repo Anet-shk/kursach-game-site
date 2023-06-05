@@ -22,8 +22,8 @@ export function Header() {
     >
       <MenuButtonHeader />
       <InstanceSearch />
-      <User />
       <ColorModeSwitcher />
+      <User />
     </Flex>
   )
 }
