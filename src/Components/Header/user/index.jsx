@@ -29,6 +29,7 @@ export function User({width = 9, height = 9}) {
             borderRadius={'2xl'}
             w={width}
             h={height}
+            maxW={'100px'}
           />
         ) : (
           <IconForButton 
