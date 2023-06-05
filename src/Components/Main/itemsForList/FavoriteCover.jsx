@@ -2,20 +2,23 @@ import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { HiOutlineHeart } from "react-icons/hi";
 
-export function FavoriteCover({favorites, setFavorites, myKey: key}) {
+export function FavoriteCover({myFavorites: favorites, setFavorites, myKey: key}) {
 
   const [shouldRewriteFavorite, setShouldRewriteFavorite] = useState(0);
 
   useEffect(() => {
-    (favorites.indexOf(key) + 1) ?
+    
+    (favorites.split(',').indexOf(key) + 1) ?
       setFavorites(() => {
-        favorites = favorites.split(", ").filter(el => key != el).join(', ')
+        console.log('01', favorites)
+        favorites = favorites.split(",").filter(el => key != el).join(',')
+        console.log('02', favorites)
         return favorites;
       }) :
       setFavorites(() => {
-        console.log('1', favorites)
-        favorites = favorites[0] ? favorites.concat(`, ${key}`) : key;
-        console.log('2', favorites)
+        console.log('11', favorites)
+        favorites = favorites[0] ? favorites.concat(`,${key}`) : key;
+        console.log('12', favorites)
         return favorites
       })
   }, [shouldRewriteFavorite])

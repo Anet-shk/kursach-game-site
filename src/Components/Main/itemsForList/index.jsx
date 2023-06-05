@@ -11,10 +11,14 @@ export function ItemOfList({prop: key}) {
   const {currentGames, favorites, setFavorites, getFavData} = useContext(Context);
   const {name, image, link, id} = currentGames[key];
 
+  // setFavorites(() => {
+  //   favorites[0] ? favorites.split(',') : [];
+  //   return favorites;
+  // })
+
   useEffect(() => {
-    if (favorites.indexOf(key) + 1) setFavoriteLocal(true);
+    if (favorites.split(",").indexOf(key) + 1) setFavoriteLocal(true);
   }, [])
-  
   
 
   return (
@@ -35,13 +39,15 @@ export function ItemOfList({prop: key}) {
         borderRadius={'2xl'}
         id={id}
         onMouseEnter={(e) => {
+          e.stopPropagation()
           setFavoriteLocal(true);
         }}
         onMouseLeave={(e) => {
+          e.stopPropagation()
           setFavoriteLocal(() => Boolean(favorites.indexOf(key) + 1) ? true : false);
         }}
       >
-        {favoriteLocal && (<FavoriteCover myKey={key} favorites={favorites} setFavorites={setFavorites} />)}
+        {favoriteLocal && (<FavoriteCover myKey={key} myFavorites={favorites} setFavorites={setFavorites} />)}
         <ImageContainer imageObj={{name, image}} />
         <TextSign text={name}/>
       </Box> 

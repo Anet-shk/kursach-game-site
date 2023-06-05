@@ -5,7 +5,7 @@ import { Context } from "../../Functions/context";
 
 export function ListOfGames() {
 
-  const {currentGames} = useContext(Context);
+  const {currentGames, favorites, setFavorites, getFavData, isOpenUser} = useContext(Context);
   
   return (
     <Flex
@@ -20,11 +20,11 @@ export function ListOfGames() {
       {
         currentGames && Object.keys(currentGames)[0]
         ? 
-        (
-          Object.keys(currentGames).map(key => {
+        
+          (isOpenUser ? favorites.split(', ') : Object.keys(currentGames)).map(key => {
             return (<ItemOfList key={key} prop={key} />);
           })
-        )
+        
         : (
             <Box 
               textAlign={'center'}

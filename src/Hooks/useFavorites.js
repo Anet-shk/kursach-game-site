@@ -10,7 +10,7 @@ export function useFavorites(app, userAuth) {
     onValue(userRef, (snapshot) => {
       const userFavor = snapshot.val();
       setFavorites(userFavor);
-      console.log('user', userFavor);
+      console.log('user get data', userFavor);
     })
   }
 
