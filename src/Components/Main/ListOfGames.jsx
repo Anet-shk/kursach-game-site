@@ -22,7 +22,7 @@ export function ListOfGames() {
         ? 
         (
           Object.keys(currentGames).map(key => {
-            return (<ItemOfList key={key} id={key} prop={currentGames[key]}/>);
+            return (<ItemOfList key={key} prop={key} />);
           })
         )
         : (

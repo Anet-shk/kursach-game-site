@@ -37,6 +37,7 @@ function App() {
   const {  games, setGames, error, filters } = useFetch(); // {response, error}
   // const { database,games: games1, setGames: setGames1, error: error1, filters: filters1 } = useDb(app);
   const { isOpen: isOpenUser, onToggle: onToggleUser } = useDisclosure();
+  const { writeUserData, getFavData, favorites, setFavorites } = useFavorites(app, userAuth)
   const { isOpen, onToggle } = useDisclosure(); // it`s for filters slider (hamburger)
   const { filtersObj, setFiltersObj } = useFiltersObj(filters);
   // const { deletedGames, setDeletedGames } = useDeletedGames();
@@ -46,7 +47,6 @@ function App() {
   const config = buildConfig(Object.keys(filters).filter(key => typeof filters[key] === 'string'));
   const { age, setAge, players, setPlayers } = useRadioValues(config);
   // const { favorites, setFavorites, writeUserData, getFavData } = useFavorites(database, userAuth);
-  
   return (
     <Context.Provider value={
       {
@@ -63,7 +63,8 @@ function App() {
         config,
         userAuth, setUserAuth, 
         login, logout, errorLogin,
-        isOpenUser, onToggleUser 
+        isOpenUser, onToggleUser,
+        writeUserData, getFavData, favorites, setFavorites
       }
     }>
       <ChakraProvider theme={extendedTheme}>
