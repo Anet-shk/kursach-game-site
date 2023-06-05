@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import { Box, Collapse, Flex, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { User } from "../Header/user/"
 import { useContext } from "react";
@@ -7,39 +7,50 @@ import { GiExitDoor } from "react-icons/gi"
 
 export function UserInfo() {
 
-  const {userAuth} = useContext(Context);
+  const {userAuth, isOpenUser, logout, onToggleUser} = useContext(Context);
 
   return (
-    <Flex
-      w={['100%', '90%', '85%', '85%', '80%']}
-      maxW={'1200px'}
-      minW={'10px'}
-      m={'10px auto'}
-      p={4}
-      justifyContent={'space-between'}
+    <Collapse
+      in={isOpenUser}
+      animateOpacity
     >
       <Flex
-        justifyContent={"space-around"}
-        width={'40%'}
+        w={['100%', '90%', '85%', '85%', '80%']}
+        maxW={'1200px'}
+        minW={'10px'}
+        m={'10px auto'}
+        p={4}
+        justifyContent={'space-between'}
       >
-        <User width={'100px'} height={'100px'}/>
-        <Text
-          fontSize={'2xl'}
+        <Flex
+          justifyContent={"space-around"}
+          width={'40%'}
         >
-          {userAuth && userAuth.displayName} <br />
-          <Box 
-            as="span" 
-            fontSize={'xl'}
+          <User width={'100px'} height={'100px'}/>
+          <Text
+            fontSize={'2xl'}
           >
-            {userAuth && userAuth.email}
-          </Box>
-        </Text>
+            {userAuth && userAuth.displayName} <br />
+            <Box 
+              as="span" 
+              fontSize={'xl'}
+            >
+              {userAuth && userAuth.email}
+            </Box>
+          </Text>
+        </Flex>
+        <Icon
+          w={8}
+          h={8}
+          as={GiExitDoor}
+          cursor={'pointer'}
+          onClick={(e) => {
+            logout()
+            onToggleUser()
+          }}
+        />
       </Flex>
-      <Icon
-        w={8}
-        h={8}
-        as={GiExitDoor}
-      />
-    </Flex>
+    </Collapse>
+    
   )
 }

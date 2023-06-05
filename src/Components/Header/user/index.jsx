@@ -6,19 +6,19 @@ import { IconForButton } from "./IconForButton";
 
 export function User({width = 9, height = 9}) {
 
-  const {userAuth, login, logout} = useContext(Context);
+  const {userAuth, login, logout, onToggleUser, setUserOpen} = useContext(Context);
 
-  console.log(userAuth)
   return (
     <Flex 
       m={'5px 0px'}
+      mr={'10px'}
       textAlign={'center'}
       justifyContent={'space-around'}
       flexDir={'column'}
       cursor={'pointer'}
       onClick={(e) => {
         e.preventDefault();
-        userAuth ? logout() : login();
+        userAuth ? onToggleUser() : login();
       }}
     >
       {

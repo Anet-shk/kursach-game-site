@@ -14,6 +14,7 @@ export function IconForButton({width = 9, height = 9}) {
       w={width}
       h={height}
       m={'auto'}
+      
     />
   )
 }
