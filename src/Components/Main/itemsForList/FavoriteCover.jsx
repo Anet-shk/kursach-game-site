@@ -21,7 +21,7 @@ export function FavoriteCover({myFavorites: favorites, setFavorites, myKey: key}
         console.log('12', favorites)
         return favorites
       })
-  }, [shouldRewriteFavorite])
+  }, [shouldRewriteFavorite]);
 
   
 

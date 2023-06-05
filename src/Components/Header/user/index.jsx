@@ -7,7 +7,7 @@ import { IconForButton } from "./IconForButton";
 export function User({width = 9, height = 9}) {
 
   const {userAuth, login, logout, onToggleUser, setUserOpen} = useContext(Context);
-
+  
   return (
     <Flex 
       m={'5px 0px'}
@@ -25,15 +25,17 @@ export function User({width = 9, height = 9}) {
         userAuth && userAuth.photoURL ? (
           <Image
             src={userAuth.photoURL}
-            alt={userAuth.displayName}
-            borderRadius={'2xl'}
+            alt={'Photo of ' + userAuth.displayName}
+            borderRadius={'full'}
             w={width}
             h={height}
             maxW={'100px'}
+            maxH={'100px'}
+            fallbackSrc={<IconForButton />}
           />
         ) : (
           <IconForButton 
-            height={height} 
+            height={height}
             width={width}
           />
         )

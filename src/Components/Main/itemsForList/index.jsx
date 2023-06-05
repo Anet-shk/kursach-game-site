@@ -9,7 +9,7 @@ export function ItemOfList({ prop: key }) {
 
   const [favoriteLocal, setFavoriteLocal] = useState(false);
   const { currentGames, favorites, setFavorites, getFavData } = useContext(Context);
-  console.log({currentGames})
+  
   const {name, image, link, id} = currentGames[key];
 
   // setFavorites(() => {
