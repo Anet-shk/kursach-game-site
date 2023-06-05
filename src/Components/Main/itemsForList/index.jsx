@@ -5,10 +5,11 @@ import { TextSign } from "./TextSign";
 import { FavoriteCover } from "./FavoriteCover";
 import { Context } from "../../../Functions/context";
 
-export function ItemOfList({prop: key}) {
+export function ItemOfList({ prop: key }) {
 
   const [favoriteLocal, setFavoriteLocal] = useState(false);
-  const {currentGames, favorites, setFavorites, getFavData} = useContext(Context);
+  const { currentGames, favorites, setFavorites, getFavData } = useContext(Context);
+  console.log({currentGames})
   const {name, image, link, id} = currentGames[key];
 
   // setFavorites(() => {
