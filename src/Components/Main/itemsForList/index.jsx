@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { VStack, Box } from "@chakra-ui/react";
+import { VStack, Box, fadeConfig } from "@chakra-ui/react";
 import { ImageContainer } from "./ImageContainer";
 import { TextSign } from "./TextSign";
 import { FavoriteCover } from "./FavoriteCover";
@@ -45,7 +45,8 @@ export function ItemOfList({ prop: key }) {
         }}
         onMouseLeave={(e) => {
           e.stopPropagation()
-          setFavoriteLocal(() => Boolean(favorites.indexOf(key) + 1) ? true : false);
+          console.log('here', favorites.slice(','), favorites.slice(',').indexOf(key) + 1)
+          setFavoriteLocal(() => Boolean(favorites.split(',').indexOf(key) + 1) ? true : false);
         }}
       >
         {favoriteLocal && (<FavoriteCover myKey={key} myFavorites={favorites} setFavorites={setFavorites} />)}

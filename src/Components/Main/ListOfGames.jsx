@@ -7,7 +7,7 @@ import { HaveNoFavorite } from "./HaveNoFavorite"
 export function ListOfGames() {
 
   const {currentGames, favorites, setFavorites, getFavData, isOpenUser} = useContext(Context);
-  console.log('34',favorites.split(','))
+  
   return (
     <Flex
       as="ul"
